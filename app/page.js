@@ -135,4 +135,4 @@ export default function Home() {
               />
               ON AIR
             </div>
-            <button onClick={signOut} title="Sign out" style={{ background: "none", border: "none", cursor: "p
+            <button onClick={signOut} style={{ background: "none", border: "none", cursor: "p
