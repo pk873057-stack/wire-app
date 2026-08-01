@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #14161C;
+  --card: #1B1E27;
+  --card-border: #2A2E3A;
+  --amber: #FFB020;
+  --green: #4ADE80;
+  --slate: #8A8F98;
+  --paper: #ECE7DA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+.wire-display {
+  font-family: 'Barlow Condensed', ui-sans-serif, system-ui, sans-serif;
+}
+
+.wire-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+button:focus-visible, textarea:focus-visible, input:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@keyframes wire-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.wire-marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: wire-marquee 38s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wire-marquee-track { animation: none; }
+}
